@@ -1,4 +1,11 @@
 pipeline {
+    
+    environment {
+        registry = "kjbrownbyu/cs204-jenkins"
+        registryCredential = 'dockerhub'
+        dockerImage=''
+    }
+
     agent any
     tools {
         maven 'apache maven 3.6.3'
